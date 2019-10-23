@@ -1,4 +1,5 @@
 resources:
+- task: SonarCloudAnalyze@1
 - repo: self
 
 queue:
