@@ -27,13 +27,6 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-- task: ms-devlabs.vsts-developer-tools-build-tasks.package-extension-build-task.PackageVSTSExtension@1
-  displayName: 'Package Extension: src/WorkItemMigrator.Extension'
-  inputs:
-    rootFolder: src/WorkItemMigrator.Extension
-    outputPath: '$(Build.ArtifactStagingDirectory)\jira-devops-workitem-migrator-$(Build.BuildNumber).vsix'
-    bypassLocalValidation: true
-
 - task: CopyFiles@2
   displayName: 'Copy JiraExport files'
   inputs:
